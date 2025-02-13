@@ -62,7 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scipts\PlayerController.cs" />
+    <Compile Include="Assets\Scipts\SceneController.cs" />
     <Compile Include="Assets\Scipts\CameraController.cs" />
+    <Compile Include="Assets\Scipts\FinishPoint.cs" />
+    <Compile Include="Assets\Scipts\PlayerHealthController.cs" />
+    <Compile Include="Assets\Scipts\DamagePlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2D Platformer Assets\Graphics\Credits.txt" />
