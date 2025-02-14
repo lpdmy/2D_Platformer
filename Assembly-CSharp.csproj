@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scipts\PlayerController.cs" />
     <Compile Include="Assets\Scipts\SceneController.cs" />
+    <Compile Include="Assets\Scipts\UIController.cs" />
     <Compile Include="Assets\Scipts\CameraController.cs" />
     <Compile Include="Assets\Scipts\FinishPoint.cs" />
     <Compile Include="Assets\Scipts\PlayerHealthController.cs" />
