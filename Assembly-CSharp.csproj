@@ -10,7 +10,6 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{DDB29414-DFB0-4D32-51DE-C6F80FD3814E}</ProjectGuid>
     <ProjectGuid>{1CD1D2D8-D189-57DC-93D2-4312385DEE6B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -64,6 +63,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scipts\PlayerController.cs" />
     <Compile Include="Assets\Scipts\SceneController.cs" />
+    <Compile Include="Assets\Scipts\CheckpointController.cs" />
+    <Compile Include="Assets\Scipts\Checkpoint.cs" />
+    <Compile Include="Assets\Scipts\LevelManager.cs" />
+    <Compile Include="Assets\Scipts\KillPlayer.cs" />
     <Compile Include="Assets\Scipts\UIController.cs" />
     <Compile Include="Assets\Scipts\CameraController.cs" />
     <Compile Include="Assets\Scipts\FinishPoint.cs" />
