@@ -7,6 +7,8 @@ public class LevelManager : MonoBehaviour
 
     public float waitToRespawn;
 
+    public int gemsCollected;
+
     public void Awake()
     {
         instance = this;
