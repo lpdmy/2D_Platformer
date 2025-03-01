@@ -28,7 +28,7 @@ public class StompBox : MonoBehaviour
             other.transform.parent.gameObject.SetActive(false);
 
             Instantiate(deathEffect, other.transform.position, other.transform.rotation);
-            Destroy(deathEffect, 0.5f);
+            
             PlayerController.instance.Bounce();
 
 
