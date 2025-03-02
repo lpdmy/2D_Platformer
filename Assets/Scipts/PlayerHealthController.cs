@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerHealthController : MonoBehaviour
 {
@@ -11,6 +11,8 @@ public class PlayerHealthController : MonoBehaviour
     private float invincibleCounter;
 
     private SpriteRenderer theSR;
+    //tạo hiệu ưng tử vong
+    public GameObject deathEffect;
 
     private void Awake()
     {
@@ -47,6 +49,8 @@ public class PlayerHealthController : MonoBehaviour
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
+                //tạo bản sao hiệu ứng tử vong
+                Instantiate(deathEffect, transform.position, transform.rotation);
 
                 //gameObject.SetActive(false);
 
