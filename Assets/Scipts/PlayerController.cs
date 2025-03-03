@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public float knockbackLength, knockbackForce;
     private float knockbackCounter;
 
+    public float bounceForce;
+
     private void Awake()
     {
         instance = this;
@@ -48,6 +50,8 @@ public class PlayerController : MonoBehaviour
                 if (isGrounded)
                 {
                     theRB.linearVelocity = new Vector2(theRB.linearVelocity.x, jumpForce);
+
+                    AudioManager.instance.PlaySFX(10);
                 }
                 else
                 {
@@ -55,6 +59,8 @@ public class PlayerController : MonoBehaviour
                     {
                         theRB.linearVelocity = new Vector2(theRB.linearVelocity.x, jumpForce);
                         canDoubleJump = false;
+
+                        AudioManager.instance.PlaySFX(10);
                     }
                 }
             }
@@ -90,6 +96,13 @@ public class PlayerController : MonoBehaviour
         theRB.linearVelocity = new Vector2(0f, knockbackForce);
     
         anim.SetTrigger("hurt");
+    }
+
+    public void Bounce()
+    {
+        theRB.linearVelocity = new Vector2(theRB.linearVelocity.x, bounceForce);
+
+        AudioManager.instance.PlaySFX(10);
     }
 
 }

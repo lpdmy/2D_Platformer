@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour
     {
         PlayerController.instance.gameObject.SetActive(false);
 
+        AudioManager.instance.PlaySFX(8);
+
         yield return new WaitForSeconds(waitToRespawn);
 
         PlayerController.instance.gameObject.SetActive(true);
