@@ -54,7 +54,7 @@ public class LevelSelectPlayer : MonoBehaviour
             }
         }
 
-        if (currentPoint.isLevel && currentPoint.levelToLoad != "")
+        if (currentPoint.isLevel && currentPoint.levelToLoad != "" && !currentPoint.isLocked) 
             {
                 if (Input.GetButtonDown("Jump"))
                 {
