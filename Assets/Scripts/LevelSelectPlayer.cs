@@ -5,6 +5,10 @@ public class LevelSelectPlayer : MonoBehaviour
     public MapPoint currentPoint;
 
     public float moveSpeed = 10f;
+
+    private bool levelLoading;
+
+    public LevelSelectManager manager;
     void Start()
     {
         
@@ -15,7 +19,7 @@ public class LevelSelectPlayer : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, currentPoint.transform.position, moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, currentPoint.transform.position) < .1f)
+        if (Vector3.Distance(transform.position, currentPoint.transform.position) < .1f && !levelLoading)
         {
 
         if (Input.GetAxisRaw("Horizontal") > .5f)
@@ -49,6 +53,16 @@ public class LevelSelectPlayer : MonoBehaviour
                 SetNextPoint(currentPoint.down);
             }
         }
+
+        if (currentPoint.isLevel && currentPoint.levelToLoad != "")
+            {
+                if (Input.GetButtonDown("Jump"))
+                {
+                    levelLoading = true;
+
+                    manager.LoadLevel();
+                }
+            }
         }
     }
 
