@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7df2f5f31584dcb46a20384e1981df91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScene: Level1
+  startScene: Level_Select
 --- !u!114 &1353501969
 MonoBehaviour:
   m_ObjectHideFlags: 0

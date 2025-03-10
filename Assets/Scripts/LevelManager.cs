@@ -74,6 +74,6 @@ public class LevelManager : MonoBehaviour
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name +  "_unlocked", 1);
 
-        SceneManager.LoadScene(levelToLoad);
+        SceneManager.LoadScene(levelToLoad); //màn ch?i ti?p theo
     }
 }
