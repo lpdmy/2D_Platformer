@@ -27,12 +27,13 @@ public class Pickup : MonoBehaviour
                 LevelManager.instance.gemsCollected++;
                 isCollected = true;
                 Destroy(gameObject);
+                AudioManager.instance.PlaySFX(6);
                 Instantiate(pickupEffect, transform.position, transform.rotation);
 
 
                 UIController.instance.UpdateGemCount();
 
-                AudioManager.instance.PlaySFX(6);
+                
             }
             if (isHeal)
             {
@@ -41,8 +42,9 @@ public class Pickup : MonoBehaviour
                     PlayerHealthController.instance.HealPlayer();
                     isCollected = true;
                     Destroy(gameObject);
-                    Instantiate(pickupEffect, transform.position, transform.rotation);
                     AudioManager.instance.PlaySFX(7);
+                    Instantiate(pickupEffect, transform.position, transform.rotation);
+                    
                 }
             }
         }
