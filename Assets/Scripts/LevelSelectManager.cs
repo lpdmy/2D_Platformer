@@ -8,9 +8,25 @@ public class LevelSelectManager : MonoBehaviour
 
     public LevelSelectPlayer thePlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    private MapPoint[] allPoints;
+
     void Start()
     {
-        
+        //load the player's position in map point 
+        allPoints = FindObjectsOfType<MapPoint>();
+
+        if (PlayerPrefs.HasKey("CurrentLevel"))
+        {
+            foreach (MapPoint point in allPoints)
+            {
+                if (point.levelToLoad == PlayerPrefs.GetString("CurrentLevel"))
+                {
+                    thePlayer.transform.position = point.transform.position;
+                    thePlayer.currentPoint = point;
+                }
+            }
+        }
     }
 
     // Update is called once per frame
