@@ -42,14 +42,14 @@ public class PlayerHealthController : MonoBehaviour
 
     public void DealDamage()
     {
-        if(invincibleCounter <= 0) //ko bat tu
+        if(invincibleCounter <= 0) 
         {
             currentHealth--;
 
             if (currentHealth <= 0)
             {
                 currentHealth = 0;
-                //tạo bản sao hiệu ứng tử vong
+                
                 Instantiate(deathEffect, transform.position, transform.rotation);
 
                 //gameObject.SetActive(false);

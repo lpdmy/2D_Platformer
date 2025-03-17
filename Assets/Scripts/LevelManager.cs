@@ -12,6 +12,9 @@ public class LevelManager : MonoBehaviour
     public int gemsCollected;
 
     public string levelToLoad;
+
+    public float timeInLevel;
+
     public void Awake()
     {
         instance = this;
@@ -20,13 +23,13 @@ public class LevelManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        timeInLevel = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timeInLevel += Time.deltaTime;
     }
 
     public void RespawnPlayer()
@@ -73,6 +76,35 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds((1f / UIController.instance.fadeSpeed) + 1f);
 
         PlayerPrefs.SetInt(SceneManager.GetActiveScene().name +  "_unlocked", 1);
+
+        //load current level after end level
+        PlayerPrefs.SetString("CurrentLevel",SceneManager.GetActiveScene().name);
+
+        //save best gem
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_gems"))
+        {
+            if (gemsCollected > PlayerPrefs.GetInt(SceneManager.GetActiveScene().name + "_gems"))
+            {
+                PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemsCollected);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt(SceneManager.GetActiveScene().name + "_gems", gemsCollected);
+        }
+
+        //save best time
+        if (PlayerPrefs.HasKey(SceneManager.GetActiveScene().name + "_time"))
+        {
+            if (timeInLevel < PlayerPrefs.GetFloat(SceneManager.GetActiveScene().name + "_time"))
+            {
+                PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", timeInLevel);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + "_time", timeInLevel);
+        }
 
         SceneManager.LoadScene(levelToLoad); //màn ch?i ti?p theo
     }

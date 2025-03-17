@@ -18,8 +18,7 @@ public class DamagePlayer : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //FindObjectOfType loi thoi
-            //FindAnyObjectByType<PlayerHealthController>().DealDamage();
+            
             PlayerHealthController.instance.DealDamage();
         }
     }
