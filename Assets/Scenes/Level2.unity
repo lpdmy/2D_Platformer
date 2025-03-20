@@ -15622,6 +15622,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 82451964481470988, guid: dbdea23cee2bd5c4da5ef009fff3757e, type: 3}
+      propertyPath: m_Size.x
+      value: 324.9559
+      objectReference: {fileID: 0}
+    - target: {fileID: 82451964481470988, guid: dbdea23cee2bd5c4da5ef009fff3757e, type: 3}
+      propertyPath: m_Offset.x
+      value: -28.234085
+      objectReference: {fileID: 0}
     - target: {fileID: 148665567612702324, guid: dbdea23cee2bd5c4da5ef009fff3757e, type: 3}
       propertyPath: m_Name
       value: Level Pack
