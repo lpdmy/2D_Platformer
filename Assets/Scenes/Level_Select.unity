@@ -430,6 +430,10 @@ PrefabInstance:
       value: '3: New enemy'
       objectReference: {fileID: 0}
     - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
+      propertyPath: totalGems
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
       propertyPath: targetTime
       value: 40
       objectReference: {fileID: 0}
