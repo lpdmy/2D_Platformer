@@ -7690,6 +7690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level Pack
       objectReference: {fileID: 0}
+    - target: {fileID: 1532035844765346780, guid: dbdea23cee2bd5c4da5ef009fff3757e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1567188635542433471, guid: dbdea23cee2bd5c4da5ef009fff3757e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 70.09198
