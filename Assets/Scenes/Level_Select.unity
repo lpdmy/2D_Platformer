@@ -426,6 +426,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
+      propertyPath: levelName
+      value: '3: New enemy'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
+      propertyPath: targetTime
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
       propertyPath: levelToLoad
       value: Level3
       objectReference: {fileID: 0}
@@ -592,6 +600,14 @@ PrefabInstance:
     - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
       propertyPath: isLevel
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
+      propertyPath: levelName
+      value: '4: Machines'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
+      propertyPath: targetTime
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3799822954374071387, guid: e7146b52cada9cb4b8ec2f8ab631f577, type: 3}
       propertyPath: levelToLoad
